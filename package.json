@@ -1,0 +1,29 @@
+{
+  "name": "kgon124.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "start": "serve -s docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KGON124/KGON124.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KGON124/KGON124.github.io/issues"
+  },
+  "homepage": "https://github.com/KGON124/KGON124.github.io#readme",
+  "devDependencies": {
+    "serve": "^14.2.4",
+    "typescript": "^5.8.3"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "description": ""
+}
