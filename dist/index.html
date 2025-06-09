@@ -2,6 +2,15 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87JVDERQH6"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-87JVDERQH6');
+    </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Keigo Onozaki Portfolio</title>
@@ -22,6 +31,7 @@
         <li><a onclick="scrollToSection('about')">About</a></li>
         <li><a onclick="scrollToSection('projects')">Projects</a></li>
         <li><a onclick="scrollToSection('research')">Research</a></li>
+        <li><a onclick="scrollToSection('Experience')">Experience</a></li>
         <li><a onclick="scrollToSection('profile')">Profile</a></li>
         <li><a onclick="scrollToSection('skills')">Skills</a></li>
         <li><a onclick="scrollToSection('contact')">Contact</a></li>
@@ -42,9 +52,9 @@
         <div class="container">
             <h2 class="section-title fade-in">About Me</h2>
             <div class="about-content fade-in">
-                <p>私は脳波解析とニューロフィードバック研究に情熱を注ぐ研究者です。</p>
-                <p>リアルタイムの脳波データ処理と可視化システムの開発を通じて、人間の認知機能の理解を深めることを目指しています。</p>
-                <p>技術と科学の融合により、新しい発見と革新を追求し続けています。</p>
+                <p>この度は、私のポートフォリオをご覧いただき、ありがとうございます。小野崎 圭吾と申します。</p>
+                <p>高専では機械・電気工学の基礎を、大学および大学院では情報・脳科学を中心に学んできました。ハードウェアからソフトウェア、さらには人間に関する知見まで、分野を横断した知識と技術の習得に興味を持って取り組んでいます。</p>
+                <p>私の活動の根底にあるのは、幼い頃から続く「モノづくり」への純粋な探究心です。高専でハードウェアとしてアイデアを形にする基礎を学んだ後、より直接的に人の生活を豊かにするシステム開発への関心が高まり、情報工学と脳科学の領域へ進みました。現在は、脳活動のリアルタイム解析といった、人と技術の境界領域にあるテーマを研究しています。</p>
             </div>
         </div>
     </section>
@@ -66,27 +76,44 @@
                         </iframe>
                     </div>
                     <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
                         <span class="tech-tag">Lab Streaming Layer</span>
                         <span class="tech-tag">PySide6</span>
                     </div>
                 </div>
                 <div class="project-card fade-in">
                     <h3>Brain Signal Processing</h3>
-                    <p>脳波信号の前処理とフィルタリングを行う高性能なシステム。ノイズ除去とアーティファクト検出機能を実装しています。</p>
+                    <p>人の脳波をリアルタイムで解析し、その状態を可視化・出力する仕組みです。脳波信号を受信し、特定の周波数帯の活動（例：注意や抑制に関係する帯域）を瞬時に解析することで、脳の状態をその場で把握することができます。</p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/-qZvE7fXjaQ" 
+                            title="Neurofeedback System Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen 
+                            style="width:100%; aspect-ratio:16/9; border-radius: 8px;">
+                        </iframe>
+                    </div>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">SciPy</span>
+                        <span class="tech-tag">Lab Streaming Layer</span>
                     </div>
                 </div>
                 <div class="project-card fade-in">
-                    <h3>Real-time Data Visualization</h3>
-                    <p>脳波データのリアルタイム可視化ダッシュボード。研究者が直感的にデータを理解できるインターフェースを提供します。</p>
+                    <h3>Real-time Adaptive Experiment System</h3>
+                    <p>解析システムと連携し、リアルタイムの脳波状態に応じて実験内容が変化する動的なタスク環境を構築しました。被験者の脳波を解析し、脳が一定の状態に達したときにのみ刺激を提示するように制御することで、脳活動と行動との因果的関係をより厳密に評価できます。</p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/d8YzmLC8RPM" 
+                            title="Neurofeedback System Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen 
+                            style="width:100%; aspect-ratio:16/9; border-radius: 8px;">
+                        </iframe>
+                    </div>
                     <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">WebSocket</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PsychoPy</span>
                     </div>
                 </div>
             </div>
@@ -117,51 +144,93 @@
             </div>
         </div>
     </section>
-    <section id="experience" class="section">
+    <section id="Experience" class="section">
         <div class="container">
             <h2 class="section-title fade-in">Experience</h2>
             <div class="projects-grid">
                 <div class="project-card fade-in">
                     <h3>アトリエ教室</h3>
-                    <p>リアルタイムの脳波解析を行うためのGUI実験ツールです。脳波データの取得から解析、可視化まで一貫して行えるシステムを開発しました。</p>
+                    <p>小学生の頃</p>
+                    <p>幼い頃に通っていたアトリエでは、工作やデッサンを通じて、自分の手でアイデアを形にする根源的な楽しさを学びました。この経験は、現在の「モノづくり」への探究心と情熱の、まさしく原点となっています。</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>武道(空手・柔道)</h3>
+                    <p>幼少期の空手 中学時代の柔道</p>
+                    <p>特に柔道では、県大会出場を目標に日々稽古へ打ち込み、結果としてその目標を達成することができました。 この経験を通じて培った精神力と忍耐力は、困難なプロジェクトにも粘り強く取り組む、現在の私の礎となっています。</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>高専ロボコン(機械・回路設計)</h3>
+                    <p>モノづくりの基礎を実践で学んだ活動です。機械班と制御班の両方を経験し、機械加工から回路設計、プログラミングまで、ハードウェア開発の一連の流れを体得しました。</p>
+                    <div class="slideshow">
+                    <img src="/assets/IMG_01-DbzWAaS8.jpeg" class="slide active"  width="100%" height="auto"/>
+                    <img src="/assets/IMG_02-CYIzHYtM.jpeg" class="slide" width="100%" height="auto"/>
+                    <img src="/assets/IMG_03-BtpRlXYM.jpeg" class="slide" width="100%" height="auto"/>
+                    <img src="/assets/IMG_04-itVl9yf6.jpeg" class="slide" width="100%" height="auto"/>
                     </div>
+                    <style>
+                    .slideshow {
+                    position: relative;
+                    width: 300px;
+                    height: 200px;
+                    overflow: hidden;
+                    }
+                    .slide {
+                    position: absolute;
+                    top: 0; left: 0;
+                    width: 100%; height: 100%;
+                    opacity: 0;
+                    transition: opacity 1s ease-in-out;
+                    object-fit: cover;
+                    }
+                    .slide.active {
+                    opacity: 1;
+                    }
+                    </style>
+
+                    <script>
+                    let index = 0;
+                    const slides = document.querySelectorAll('.slide');
+                    setInterval(() => {
+                    slides[index].classList.remove('active');
+                    index = (index + 1) % slides.length;
+                    slides[index].classList.add('active');
+                    }, 4000); // 4秒ごとに切り替え
+                    </script>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>起業プロジェクト DMZ/LPT Base ライアソン大学主催</h3>
+                    <p>企業の経営者陣をメンターに迎えたアイデアソン型プロジェクトで、チームリーダーとしてアイデアの事業化プロセスを主導しました。市場分析から事業計画の策定まで、ビジネスの上流工程を実践的に経験し、技術を価値ある製品・サービスへと昇華させる視点を養いました。</p>
+                    <a href= "https://www.mda.ne.jp/basecamp/" target="_blank" >link</a>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>豊橋技術科学大学　ラグビー部</h3>
+                    <p>学部３年次</p>
+                    <p>部長就任時、チームは部員減と指導者不足という深刻な課題を抱えていました。私はこの状況を打開するため、練習方法の改革やOB・地域チームとの連携体制構築を計画。自ら交渉・調整を行い、具体的な解決策を実行した結果、部員数は増加し、チームは再び活気を取り戻しました。この経験を通じ、困難な状況でも本質を見極め、周囲を巻き込みながら計画をやり遂げる推進力を体得しました。</p>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>機械学習講座 東京大学 松尾研究室 GCI</h3>
+                    <p>Python（NumPy, Pandas, Matplotlib）を用いたデータ前処理・可視化から、回帰・分類・クラスタリングなどの機械学習モデル構築・評価・チューニングまで一貫して実習しました。さらに、SQLによるデータベース操作や、企業データを使った仮説立案・ビジネス提案型の最終課題を通じて、データに基づく意思決定力とビジネス視点での分析スキルを実践的に学び、修了証を獲得しました。</p>
+                    <a href= "https://gci2.t.u-tokyo.ac.jp/" target="_blank" >link</a>
                     <div class="tech-stack">
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Lab Streaming Layer</span>
-                        <span class="tech-tag">PySide6</span>
                     </div>
                 </div>
                 <div class="project-card fade-in">
-                    <h3>Brain Signal Processing</h3>
-                    <p>脳波信号の前処理とフィルタリングを行う高性能なシステム。ノイズ除去とアーティファクト検出機能を実装しています。</p>
+                    <h3>株式会社ナガセ</h3>
+                    <p>長期インターンシップ</p> 
+                    <p>教育機関内のDX推進組織において、RPA（UiPath）を用いた業務自動化やロボット運用保守、システム実行代行、マニュアル整備、エラー対応、オンボーディング設計など、組織全体の効率化に寄与する業務に幅広く関わっています。実務を通じて、システム運用の安定化・業務設計・報連相の重要性など、エンジニアリングと組織運営の両面を学んでいます。</p>
                     <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NumPy</span>
-                        <span class="tech-tag">SciPy</span>
+                        <span class="tech-tag">RPA</span>
+                        <span class="tech-tag">UiPath</span>
+            
                     </div>
-                </div>
+                </div>                
                 <div class="project-card fade-in">
-                    <h3>Real-time Data Visualization</h3>
-                    <p>脳波データのリアルタイム可視化ダッシュボード。研究者が直感的にデータを理解できるインターフェースを提供します。</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">WebSocket</span>
-                <div class="project-card fade-in">
-                    <h3>Real-time Data Visualization</h3>
-                    <p>脳波データのリアルタイム可視化ダッシュボード。研究者が直感的にデータを理解できるインターフェースを提供します。</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">WebSocket</span>
-                <div class="project-card fade-in">
-                    <h3>Real-time Data Visualization</h3>
-                    <p>脳波データのリアルタイム可視化ダッシュボード。研究者が直感的にデータを理解できるインターフェースを提供します。</p>
-                    <div class="tech-stack">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">WebSocket</span>
+                    <h3>ソニーコンピュータサイエンス研究所(Sony CSL)</h3>
+                    <p>インターンシップ　2025年1月から2ヶ月間</p> 
+                    <p>脳科学と工学を融合した研究テーマに取り組みました。研究者の方とディスカッションを重ねながら、ヒューマン・コンピュータ・インタラクション領域の実験用システムの設計・開発を担当し、GUI設計やプロトタイプ作成を経験しました。社外秘のため詳細は控えますが、研究用途に特化したユーザーインターフェースの実装や、短期間での仕様調整・検証を通して、現場で求められる設計力・対話力・実装力を実践的に学びました。</p>
                     </div>
+                </div>              
                 </div>
             </div>
         </div>
@@ -175,33 +244,43 @@
             <div class="timeline">
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-year">2002</div>
-                        <p>誕生</p>
+                        <div class="timeline-year">誕生</div>
+                        <p>神奈川県横浜市で生まれる</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-
-                        <p>神奈川県横浜市</p>                        <div class="timeline-year">2015</div>
-                        <p>柔道部に入部<br>武道を通じて精神力と体力を鍛える</p>
+                   
+                        <div class="timeline-year">小学生</div>
+                        <p>アトリエ、水泳、空手を習う</p>
+                        <p>絵や工作が好き</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-year">2018</div>
-                        <p>筋トレを始める<br>3年次に県大会出場<br>ラグビー部にも参加し、チームワークを学ぶ</p>
+                   
+                        <div class="timeline-year">中学生</div>
+                        <p>柔道部に入部<br>武道を通じて精神力と体力を鍛える<br>3年次に県大会出場</p>
                     </div>
-                </div>
+                </div>                
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-year">2023</div>
+                        <div class="timeline-year">高専生</div>
+                        <p>高専に入学し、機械、電気について学ぶ<br></p>
                         <p>ロボコンに参加<br>技術と創造性を融合したプロジェクトに取り組む</p>
                     </div>
                 </div>
                 <div class="timeline-item fade-in">
                     <div class="timeline-content">
-                        <div class="timeline-year">2025</div>
-                        <p>現在：研究活動継続中<br>ニューロフィードバック研究の発展に貢献</p>
+                        <div class="timeline-year">大学生</div>
+                        <p>豊橋の大学へ<br>情報知能工学課程へ編入する<br>ラグビー部に入部し部長になる</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">大学院生
+                        </div>
+                        <p>研究活動継続中<br>ニューロフィードバック研究に取り組む</p>
                     </div>
                 </div>
             </div>
@@ -289,14 +368,5 @@
     </section>
 
   <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-87JVDERQH6"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-87JVDERQH6');
-    </script>
 </body>
 </html>
