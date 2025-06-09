@@ -1,8 +1,243 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="ja">
-<head><meta charset="UTF-8" /><title>My Vite TS Page</title>  <script type="module" crossorigin src="/assets/index-CN_BOv7E.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Keigo Onozaki Portfolio</title>
+  <script type="module" crossorigin src="/assets/index-yDJJ25kY.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DoVC7CVy.css">
 </head>
 <body>
-  <h1 id="app">Loading…</h1>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="bg-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo" onclick="scrollToSection('home')">KEIGO ONOZAKI</div>
+      <ul class="nav-links">
+        <li><a onclick="scrollToSection('about')">About</a></li>
+        <li><a onclick="scrollToSection('projects')">Projects</a></li>
+        <li><a onclick="scrollToSection('research')">Research</a></li>
+        <li><a onclick="scrollToSection('profile')">Profile</a></li>
+        <li><a onclick="scrollToSection('skills')">Skills</a></li>
+        <li><a onclick="scrollToSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+    <section id="home" class="section">
+        <div class="container">
+            <div class="hero fade-in">
+                <h1>KEIGO ONOZAKI</h1>
+                <p>研究 × 開発</p>
+                <p>Neurofeedback Research & Development</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content fade-in">
+                <p>私は脳波解析とニューロフィードバック研究に情熱を注ぐ研究者です。</p>
+                <p>リアルタイムの脳波データ処理と可視化システムの開発を通じて、人間の認知機能の理解を深めることを目指しています。</p>
+                <p>技術と科学の融合により、新しい発見と革新を追求し続けています。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <h3>Neurofeedback System</h3>
+                    <p>リアルタイムの脳波解析を行うためのGUI実験ツールです。脳波データの取得から解析、可視化まで一貫して行えるシステムを開発しました。</p>
+                    <div class="video-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/NdPDyoXdvt0" 
+                            title="Neurofeedback System Demo" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            allowfullscreen 
+                            style="width:100%; aspect-ratio:16/9; border-radius: 8px;">
+                        </iframe>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Lab Streaming Layer</span>
+                        <span class="tech-tag">PySide6</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Brain Signal Processing</h3>
+                    <p>脳波信号の前処理とフィルタリングを行う高性能なシステム。ノイズ除去とアーティファクト検出機能を実装しています。</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">SciPy</span>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <h3>Real-time Data Visualization</h3>
+                    <p>脳波データのリアルタイム可視化ダッシュボード。研究者が直感的にデータを理解できるインターフェースを提供します。</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">WebSocket</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="research" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Research</h2>
+            <div class="research-content">
+                <div class="research-card fade-in">
+                    <h3>研究テーマ</h3>
+                    <p>私の研究テーマは「リアルタイム脳波解析によるニューロフィードバックシステムの開発」です。</p>
+                    <p>脳波データをリアルタイムで処理し、被験者にフィードバックを提供することで、脳機能の向上や認知能力の改善を目指しています。</p>
+                    <p>この研究により、医療分野やスポーツ科学、教育分野での応用が期待されています。</p>
+
+                    <p><strong>キーワード:</strong> ニューロフィードバック, 脳波解析, リアルタイム処理, データ可視化</p>
+                    <p><strong>使用技術:</strong> Python, Lab Streaming Layer, PySide6, NumPy, SciPy</p>
+                    <p><strong>今後の展望:</strong> ニューロフィードバック技術の応用範囲を広げ、より多くの分野での実用化を目指しています。</p>
+                    <p>
+                        <img 
+                            src="/assets/realtime-BhWH7j-U.jpg" 
+                            alt="Diagram showing traditional brainwave analysis workflow on the left with Japanese text describing integration, cost, and time precision. A blue arrow labeled Lab Streaming Layer points to two outcomes on the right: Brain Machine Interface with a robot arm and Neurofeedback with a feedback loop. Both Japanese and English text are present. The tone is technical and informative." 
+                            class="research-image" 
+                            style="max-width: 100%; height: auto;"
+                        >
+                    </p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Profile</h2>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2002</div>
+                        <p>誕生</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+
+                        <p>神奈川県横浜市</p>                        <div class="timeline-year">2015</div>
+                        <p>柔道部に入部<br>武道を通じて精神力と体力を鍛える</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2018</div>
+                        <p>筋トレを始める<br>3年次に県大会出場<br>ラグビー部にも参加し、チームワークを学ぶ</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <p>ロボコンに参加<br>技術と創造性を融合したプロジェクトに取り組む</p>
+                    </div>
+                </div>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <p>現在：研究活動継続中<br>ニューロフィードバック研究の発展に貢献</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>プログラミング</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>Unity</li>
+                        <li>Arduino</li>
+                        <li>R</li>
+                        <li>MATLAB</li>
+                        <li>HDL(Verilog)</li> 
+                        <li>TypeScript</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>研究・解析</h3>
+                    <ul class="skill-list">
+                        <li>脳波解析</li>
+                        <li>信号処理</li>
+                        <li>データ可視化</li>
+                        <li>統計解析</li>
+                        <li>機械学習</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>ツール・フレームワーク</h3>
+                    <ul class="skill-list">
+                        <li>Lab Streaming Layer</li>
+                        <li>PySide6</li>
+                        <li>NumPy/SciPy</li>
+                        <li>MNE-Python</li>
+                        <li>PsychPy</li>
+                        <li>Unity</li>
+                        <li>Git</li>
+                        <li>uv</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>デザイン・3D</h3>
+                    <ul class="skill-list">
+                        <li>Procreate</li>
+                        <li>Affinity Designer</li>
+                        <li>Fusion360</li>
+                        <li>Solidworks</li>
+                        <li>Inventor</li>
+                        <li>PCBE</li>
+                        <li>KiCAD</li>
+                        <li>Blender</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>スポーツ・活動</h3>
+                    <ul class="skill-list">
+                        <li>空手(小1-小6)</li>
+                        <li>水泳(保育園から)</li>
+                        <li>柔道(中学1-3)</li>
+                        <li>ロボコン(高専)</li>
+                        <li>ラグビー(現在)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="contact-content fade-in">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p>お気軽にご連絡ください。</p>
+                <a href="mailto:KeigoOnozaki.ToyohashiTech@gmail.com" class="email-link">
+                    KeigoOnozaki.ToyohashiTech@gmail.com
+                </a>
+            </div>
+        </div>
+    </section>
+
+  <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
 </body>
 </html>
