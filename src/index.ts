@@ -6,11 +6,13 @@ export function scrollToSection(sectionId: string): void {
   const el = document.getElementById(sectionId);
   if (el) el.scrollIntoView({ behavior: 'smooth' });
 }
+(window as any).scrollToSection = scrollToSection;
 
 // ページトップへ戻る
 export function scrollToTop(): void {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+(window as any).scrollToTop = scrollToTop;
 
 // プログレスバー更新
 function updateProgressBar(): void {
