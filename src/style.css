@@ -475,6 +475,12 @@
             margin-bottom: 1.5rem;
         }
 
+        .research-card p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
         .video-container {
             margin-top: 1.5rem;
             border-radius: 15px;

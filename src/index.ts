@@ -149,11 +149,13 @@ function renderContent(): void {
     researchCard.innerHTML = '';
 
     let htmlContent = `<h3>${contentData.research.theme}</h3>`;
+    htmlContent += `<div style="text-align: left; margin-bottom: 2rem;">`;
     contentData.research.paragraphs.forEach(p => {
-      htmlContent += `<p>${p}</p>`;
+      htmlContent += `<p style="margin-bottom: 0.2rem;">${p}</p>`;
     });
+    htmlContent += `</div>`;
 
-    htmlContent += `<br/>
+    htmlContent += `
     <p><strong>キーワード:</strong> ${contentData.research.keyword}</p>
     <p><strong>使用技術:</strong> ${contentData.research.tech}</p>
     <p><strong>今後の展望:</strong> ${contentData.research.future}</p>
@@ -267,15 +269,18 @@ function init(): void {
   handleScrollAnimation();  // 初回フェードイン
 
   // スライドショーの初期化
-  const slides = document.querySelectorAll<HTMLElement>('.slide');
-  if (slides.length > 0) {
-    let index = 0;
-    setInterval(() => {
-      slides[index].classList.remove('active');
-      index = (index + 1) % slides.length;
-      slides[index].classList.add('active');
-    }, 4000); // 4秒ごとに切り替え
-  }
+  const slideshows = document.querySelectorAll<HTMLElement>('.slideshow');
+  slideshows.forEach(slideshow => {
+    const slides = slideshow.querySelectorAll<HTMLElement>('.slide');
+    if (slides.length > 1) {
+      let index = 0;
+      setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+      }, 4000); // 4秒ごとに切り替え
+    }
+  });
 }
 
 // イベントリスナー登録
