@@ -106,12 +106,7 @@
     </section>
 
     <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">↑</button>
-    <script type="module">
-        import { scrollToSection, scrollToTop } from './src/index.js';
-        // グローバルに公開
-        window.scrollToSection = scrollToSection;
-        window.scrollToTop = scrollToTop;
-    </script>
+    <script type="module" src="/src/index.ts"></script>
 </body>
 
 </html>
