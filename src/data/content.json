@@ -48,8 +48,8 @@
                 "link": "https://kgon124.github.io/Mindmap-text/",
                 "linkText": "Mindmapを開く",
                 "images": [
-                    "./src/image/mindmap_1.png",
-                    "./src/image/mindmap_2.png"
+                    "/image/mindmap_1.png",
+                    "/image/mindmap_2.png"
                 ],
                 "techStack": [
                     "React",
@@ -69,7 +69,7 @@
         "keyword": "ニューロフィードバック, 脳波解析, リアルタイム処理, データ可視化",
         "tech": "Python, Lab Streaming Layer, PySide6, NumPy, SciPy",
         "future": "ニューロフィードバック技術の応用範囲を広げ、より多くの分野での実用化を目指しています。",
-        "image": "./src/image/realtime.jpg"
+        "image": "/image/realtime.jpg"
     },
     "experience": {
         "title": "Experience",
@@ -89,10 +89,10 @@
                 "period": "",
                 "description": "モノづくりの基礎を実践で学んだ活動です。機械班と制御班の両方を経験し、機械加工から回路設計、プログラミングまで、ハードウェア開発の一連の流れを体得しました。",
                 "images": [
-                    "./src/image/IMG_01.jpeg",
-                    "./src/image/IMG_02.jpeg",
-                    "./src/image/IMG_03.jpeg",
-                    "./src/image/IMG_04.jpeg"
+                    "/image/IMG_01.jpeg",
+                    "/image/IMG_02.jpeg",
+                    "/image/IMG_03.jpeg",
+                    "/image/IMG_04.jpeg"
                 ]
             },
             {
